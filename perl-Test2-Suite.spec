@@ -4,7 +4,7 @@
 #
 Name     : perl-Test2-Suite
 Version  : 0.000072
-Release  : 6
+Release  : 7
 URL      : http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test2-Suite-0.000072.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test2-Suite-0.000072.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
