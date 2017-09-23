@@ -4,7 +4,7 @@
 #
 Name     : perl-Test2-Suite
 Version  : 0.000077
-Release  : 11
+Release  : 12
 URL      : https://www.cpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000077.tar.gz
 Source0  : https://www.cpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000077.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
@@ -43,6 +43,13 @@ else
 %{__perl} Build.PL
 ./Build
 fi
+
+%check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
