@@ -1,3 +1,82 @@
+0.000115  2018-07-11 09:39:37-07:00 America/Los_Angeles
+
+    - Fix warning on undefined note/diag
+    - Improve an error message.
+
+0.000114  2018-04-19 08:39:56-07:00 America/Los_Angeles
+
+    - Fix missing manual section
+
+0.000113  2018-04-19 08:03:42-07:00 America/Los_Angeles
+
+    - Fix typo
+
+0.000112  2018-04-19 07:15:40-07:00 America/Los_Angeles
+
+    - Switch spec to use the testing_done callback
+    - Update copyright dates
+    - Finish the Anatomy manual section
+    - Finish the Tooling manual section
+
+0.000111  2018-03-14 12:37:45-07:00 America/Los_Angeles
+
+    - No Changes since last trial
+
+0.000110  2018-03-13 13:36:37-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Allow events from unattached processes in AsyncSubtest
+
+0.000109  2018-03-12 13:20:18-07:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add AsyncSubtest retrieval to hubs
+
+0.000108  2018-03-11 12:51:56-07:00 America/Los_Angeles
+
+    - No changes since last release
+
+0.000107  2018-03-09 15:43:30-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add rounded() and within() wrappers for approximate comparisons
+
+0.000106  2018-03-06 13:10:55-08:00 America/Los_Angeles
+
+    - No changes since trial
+
+0.000105  2018-03-06 09:13:36-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix nesting bug in Test2::Workflow
+
+0.000104  2018-03-05 09:27:44-08:00 America/Los_Angeles
+
+    - Add Data::Dumper to dep list (#154)
+
+0.000103  2018-03-02 13:00:54-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - AsyncSubtest now works with UUIDs and adds other proper meta-data
+
+0.000102  2018-03-02 09:45:27-08:00 America/Los_Angeles
+
+    - No Changes since last trial
+
+0.000101  2018-02-21 16:27:18-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Add much needed verbosity to 'You must attach to an AsyncSubtest ...' errors
+    - Documentation updates
+
+0.000100  2018-02-13 21:41:30-08:00 America/Los_Angeles
+
+    - No changes from last TRIAL
+
+0.000099  2018-02-06 12:53:16-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix AsyncSubtest plan to be at the right nesting, and buffered
+
+0.000098  2018-02-06 12:05:28-08:00 America/Los_Angeles (TRIAL RELEASE)
+
+    - Fix AsyncSubtest main event buffered/nesting values
+    - Fix bug where AsyncSub test vanishes with no error when finished after
+      its parent ends.
+
 0.000097  2017-12-10 20:23:21-08:00 America/Los_Angeles
 
     - Documentation fixes
