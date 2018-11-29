@@ -1,6 +1,6 @@
-0.000115
-perl(Sub::Info)
+0.000116
 perl(Importer)
 perl(Module::Pluggable)
-perl(Term::Table)
 perl(Scope::Guard)
+perl(Sub::Info)
+perl(Term::Table)
