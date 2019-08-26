@@ -4,19 +4,24 @@
 #
 Name     : perl-Test2-Suite
 Version  : 0.000125
-Release  : 45
+Release  : 46
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000125.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000125.tar.gz
-Summary  : Distribution with a rich set of tools built upon the Test2 framework.
+Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Test2-Suite-license = %{version}-%{release}
+Requires: perl(Module::Pluggable)
+Requires: perl(Scope::Guard)
+Requires: perl(Term::Table)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Importer)
 BuildRequires : perl(Module::Pluggable)
 BuildRequires : perl(Scope::Guard)
 BuildRequires : perl(Sub::Info)
 BuildRequires : perl(Term::Table)
+BuildRequires : perl(Test::More)
+BuildRequires : perl(ok)
 
 %description
 NAME
@@ -27,7 +32,6 @@ Test2 framework.
 Summary: dev components for the perl-Test2-Suite package.
 Group: Development
 Provides: perl-Test2-Suite-devel = %{version}-%{release}
-Requires: perl-Test2-Suite = %{version}-%{release}
 Requires: perl-Test2-Suite = %{version}-%{release}
 
 %description dev
