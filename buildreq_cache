@@ -1,4 +1,4 @@
-0.000126
+0.000127
 perl(Importer)
 perl(Module::Pluggable)
 perl(Scope::Guard)
@@ -6,3 +6,4 @@ perl(Sub::Info)
 perl(Term::Table)
 perl(Test::More)
 perl(ok)
+util-linux
