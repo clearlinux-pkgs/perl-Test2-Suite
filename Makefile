@@ -1,5 +1,5 @@
 PKG_NAME := perl-Test2-Suite
-URL = https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000136.tar.gz
+URL = https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000138.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
