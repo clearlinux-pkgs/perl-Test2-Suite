@@ -4,12 +4,13 @@
 #
 Name     : perl-Test2-Suite
 Version  : 0.000140
-Release  : 65
+Release  : 66
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000140.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000140.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Test2-Suite-license = %{version}-%{release}
 Requires: perl-Test2-Suite-perl = %{version}-%{release}
 Requires: perl(Module::Pluggable)
 Requires: perl(Scope::Guard)
@@ -34,6 +35,14 @@ Requires: perl-Test2-Suite = %{version}-%{release}
 
 %description dev
 dev components for the perl-Test2-Suite package.
+
+
+%package license
+Summary: license components for the perl-Test2-Suite package.
+Group: Default
+
+%description license
+license components for the perl-Test2-Suite package.
 
 
 %package perl
@@ -71,6 +80,8 @@ make TEST_VERBOSE=1 test || :
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Test2-Suite
+cp %{_builddir}/Test2-Suite-0.000140/LICENSE %{buildroot}/usr/share/package-licenses/perl-Test2-Suite/47401bd85db249c81fa0713cae3355c651aa4e9b
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -200,6 +211,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test2::Workflow::Task.3
 /usr/share/man/man3/Test2::Workflow::Task::Action.3
 /usr/share/man/man3/Test2::Workflow::Task::Group.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Test2-Suite/47401bd85db249c81fa0713cae3355c651aa4e9b
 
 %files perl
 %defattr(-,root,root,-)
