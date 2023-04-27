@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-Test2-Suite
-Version  : 0.000150
-Release  : 79
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000150.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000150.tar.gz
+Version  : 0.000152
+Release  : 80
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000152.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000152.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -18,9 +18,6 @@ Requires: perl(Scope::Guard)
 Requires: perl(Term::Table)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Importer)
-BuildRequires : perl(Module::Pluggable)
-BuildRequires : perl(Scope::Guard)
-BuildRequires : perl(Sub::Info)
 BuildRequires : perl(Term::Table)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -59,8 +56,8 @@ perl components for the perl-Test2-Suite package.
 
 
 %prep
-%setup -q -n Test2-Suite-0.000150
-cd %{_builddir}/Test2-Suite-0.000150
+%setup -q -n Test2-Suite-0.000152
+cd %{_builddir}/Test2-Suite-0.000152
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -202,6 +199,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test2::Tools::Tester.3
 /usr/share/man/man3/Test2::Tools::Warnings.3
 /usr/share/man/man3/Test2::Util::Grabber.3
+/usr/share/man/man3/Test2::Util::Guard.3
+/usr/share/man/man3/Test2::Util::Importer.3
 /usr/share/man/man3/Test2::Util::Ref.3
 /usr/share/man/man3/Test2::Util::Stash.3
 /usr/share/man/man3/Test2::Util::Sub.3
