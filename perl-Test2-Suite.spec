@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-Test2-Suite
-Version  : 0.000152
-Release  : 80
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000152.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000152.tar.gz
+Version  : 0.000155
+Release  : 81
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000155.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000155.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -18,6 +18,7 @@ Requires: perl(Scope::Guard)
 Requires: perl(Term::Table)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Importer)
+BuildRequires : perl(JSON::MaybeXS)
 BuildRequires : perl(Term::Table)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -56,8 +57,8 @@ perl components for the perl-Test2-Suite package.
 
 
 %prep
-%setup -q -n Test2-Suite-0.000152
-cd %{_builddir}/Test2-Suite-0.000152
+%setup -q -n Test2-Suite-0.000155
+cd %{_builddir}/Test2-Suite-0.000155
 
 %build
 export http_proxy=http://127.0.0.1:9/

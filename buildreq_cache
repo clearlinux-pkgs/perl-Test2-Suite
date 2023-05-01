@@ -1,3 +1,4 @@
-0.000152
+0.000155
 perl(Importer)
+perl(JSON::MaybeXS)
 perl(Term::Table)
