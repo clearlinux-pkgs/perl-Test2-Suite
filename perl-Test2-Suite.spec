@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-Test2-Suite
-Version  : 0.000155
-Release  : 83
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000155.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000155.tar.gz
+Version  : 0.000156
+Release  : 84
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000156.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000156.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -17,7 +17,6 @@ Requires: perl(Module::Pluggable)
 Requires: perl(Scope::Guard)
 Requires: perl(Term::Table)
 BuildRequires : buildreq-cpan
-BuildRequires : perl(Importer)
 BuildRequires : perl(JSON::MaybeXS)
 BuildRequires : perl(Term::Table)
 # Suppress stripping binaries
@@ -57,8 +56,11 @@ perl components for the perl-Test2-Suite package.
 
 
 %prep
-%setup -q -n Test2-Suite-0.000155
-cd %{_builddir}/Test2-Suite-0.000155
+%setup -q -n Test2-Suite-0.000156
+cd %{_builddir}/Test2-Suite-0.000156
+pushd ..
+cp -a Test2-Suite-0.000156 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -66,7 +68,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
 if test -f Makefile.PL; then
-%{__perl} Makefile.PL
+%{__perl} -I. Makefile.PL
 make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
@@ -83,7 +85,7 @@ make TEST_VERBOSE=1 test || :
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Test2-Suite
-cp %{_builddir}/Test2-Suite-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Test2-Suite/46e5653a9b161b127e04780a2ed6d8b1531663e8 || :
+cp %{_builddir}/Test2-Suite-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Test2-Suite/28e7ec7493915d0625a4d80dd3b2ad71b2ec9fdc || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -93,6 +95,7 @@ find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
 find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %{_fixperms} %{buildroot}/*
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -219,7 +222,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Test2-Suite/46e5653a9b161b127e04780a2ed6d8b1531663e8
+/usr/share/package-licenses/perl-Test2-Suite/28e7ec7493915d0625a4d80dd3b2ad71b2ec9fdc
 
 %files perl
 %defattr(-,root,root,-)
