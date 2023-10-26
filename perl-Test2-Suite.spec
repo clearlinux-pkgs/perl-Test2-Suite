@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : perl-Test2-Suite
-Version  : 0.000158
-Release  : 85
-URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000158.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000158.tar.gz
+Version  : 0.000159
+Release  : 86
+URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000159.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000159.tar.gz
 Summary  : 'Distribution with a rich set of tools built upon the Test2 framework.'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -58,10 +58,10 @@ perl components for the perl-Test2-Suite package.
 
 
 %prep
-%setup -q -n Test2-Suite-0.000158
-cd %{_builddir}/Test2-Suite-0.000158
+%setup -q -n Test2-Suite-0.000159
+cd %{_builddir}/Test2-Suite-0.000159
 pushd ..
-cp -a Test2-Suite-0.000158 buildavx2
+cp -a Test2-Suite-0.000159 buildavx2
 popd
 
 %build
